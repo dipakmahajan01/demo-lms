@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const studentModel = mongoose.Schema({
+const studentModel = new mongoose.Schema({
     name: {
         type: String,
         required: true
@@ -11,12 +11,16 @@ const studentModel = mongoose.Schema({
         unique: true
     },
     school: {
-        type: String,
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'School'
+
     },
     faculty: {
-        type: String,
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Faculty'
     }
-
+}, {
+  timestamp:true
 })
 module.exports = mongoose.model('Student', studentModel)
 

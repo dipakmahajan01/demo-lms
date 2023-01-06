@@ -1,6 +1,7 @@
 const SchoolModel = require('../model/schoolModel')
 const facultyModel = require('../model/facultyModel')
 const StudentModel = require('../model/studentModel.js')
+const { default: mongoose } = require('mongoose')
 
 exports.createSchool = async (req, res) => {
     try {
@@ -69,11 +70,11 @@ exports.deleteSchool = async (req, res) => {
                 message: 'schoolData not found'
             })
         }
-        const faculty = await facultyModel.findByIdAndDelete({ school: _id })
+        const faculty = await facultyModel.findOneAndDelete({ school: _id })
         if (!faculty) {
             return res.status(404).json({ error: 'faculty not found' })
         }
-        const student = await StudentModel.findByIdAndDelete({
+        const student = await StudentModel.findOneAndDelete({
             school: _id
         })
         if (!student) {
@@ -82,7 +83,7 @@ exports.deleteSchool = async (req, res) => {
         return res.status(200).json({
             message: 'successfully deleted',
             data1: school, data2: faculty,
-            data3:student
+            data3: student
         })
     } catch (error) {
         return res.status(500).json({

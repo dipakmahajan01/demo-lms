@@ -1,0 +1,492 @@
+{
+	"info": {
+		"_postman_id": "74484650-081e-4e21-837f-c20b4e9ddcc8",
+		"name": "demo_lms",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23702360"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/api/admin/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"email\": \"dipakmahajan2808@gmail.com\",\r\n    \"password\": \"Dipak@1928\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/admin/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"admin",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/admin/signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"dipak\",\r\n    \"email\": \"dipakmahajan2808@gmail.com\",\r\n    \"password\": \"Dipak@1928\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/admin/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"admin",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/school/delete_school",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2I3MjkxYTBjNmNmODVkMjJmZjQzMzgiLCJlbWFpbCI6ImRpcGFrbWFoYWphbjI4MDhAZ21haWwuY29tIiwiaWF0IjoxNjcyOTc3NDYyLCJleHAiOjE2NzI5ODEwNjJ9.cxobM4ic9x_hxor6Za7muym6kpO8Il1xYdCQr7luw50",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"_id\": \"63b7a5fac129f149e8ff3ff7\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/school/delete_school",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"school",
+						"delete_school"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/school/update_school",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2I3MjkxYTBjNmNmODVkMjJmZjQzMzgiLCJlbWFpbCI6ImRpcGFrbWFoYWphbjI4MDhAZ21haWwuY29tIiwiaWF0IjoxNjcyOTc3NDYyLCJleHAiOjE2NzI5ODEwNjJ9.cxobM4ic9x_hxor6Za7muym6kpO8Il1xYdCQr7luw50",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \"_id\":\"63b7a5fac129f149e8ff3ff7\",\r\n    \"name\":\"lp savani school\",\r\n    \"email\":\"lpsavani08@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/school/update_school",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"school",
+						"update_school"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/school/get_school",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2I3MjkxYTBjNmNmODVkMjJmZjQzMzgiLCJlbWFpbCI6ImRpcGFrbWFoYWphbjI4MDhAZ21haWwuY29tIiwiaWF0IjoxNjcyOTc3NDYyLCJleHAiOjE2NzI5ODEwNjJ9.cxobM4ic9x_hxor6Za7muym6kpO8Il1xYdCQr7luw50",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/school/get_school",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"school",
+						"get_school"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/school/create_school",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2I3MjkxYTBjNmNmODVkMjJmZjQzMzgiLCJlbWFpbCI6ImRpcGFrbWFoYWphbjI4MDhAZ21haWwuY29tIiwiaWF0IjoxNjcyOTc3NDYyLCJleHAiOjE2NzI5ODEwNjJ9.cxobM4ic9x_hxor6Za7muym6kpO8Il1xYdCQr7luw50",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"S.D jain school\",\r\n    \"email\":\"sdjain08@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/school/create_school",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"school",
+						"create_school"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/faculty/create_faculty",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2I3MjkxYTBjNmNmODVkMjJmZjQzMzgiLCJlbWFpbCI6ImRpcGFrbWFoYWphbjI4MDhAZ21haWwuY29tIiwiaWF0IjoxNjcyOTgyOTEwLCJleHAiOjE2NzI5ODY1MTB9.P3WVKo_-FwvrgG1JPzs1J9N4yvb2YAW4ICX_1t5QgMM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"ansuman jaa\",\r\n    \"email\":\"ansuman2808@gmail.com\",\r\n    \"school\":\"63b7b396a522691abe9f63e6\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/faculty/create_faculty",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"faculty",
+						"create_faculty"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/faculty/get_faculty",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2I3MjkxYTBjNmNmODVkMjJmZjQzMzgiLCJlbWFpbCI6ImRpcGFrbWFoYWphbjI4MDhAZ21haWwuY29tIiwiaWF0IjoxNjcyOTgyOTEwLCJleHAiOjE2NzI5ODY1MTB9.P3WVKo_-FwvrgG1JPzs1J9N4yvb2YAW4ICX_1t5QgMM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/faculty/get_faculty",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"faculty",
+						"get_faculty"
+					],
+					"query": [
+						{
+							"key": "x-access-token",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/faculty/update_faculty",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2I3MjkxYTBjNmNmODVkMjJmZjQzMzgiLCJlbWFpbCI6ImRpcGFrbWFoYWphbjI4MDhAZ21haWwuY29tIiwiaWF0IjoxNjcyOTgyOTEwLCJleHAiOjE2NzI5ODY1MTB9.P3WVKo_-FwvrgG1JPzs1J9N4yvb2YAW4ICX_1t5QgMM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"_id\": \"63b7b3a8a522691abe9f63e9\",\r\n    \"name\":\"ankit tiwari\",\r\n    \"email\":\"ankit@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/faculty/update_faculty",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"faculty",
+						"update_faculty"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/faculty/delete_faculty",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2I3MjkxYTBjNmNmODVkMjJmZjQzMzgiLCJlbWFpbCI6ImRpcGFrbWFoYWphbjI4MDhAZ21haWwuY29tIiwiaWF0IjoxNjcyOTgyOTEwLCJleHAiOjE2NzI5ODY1MTB9.P3WVKo_-FwvrgG1JPzs1J9N4yvb2YAW4ICX_1t5QgMM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"_id\":\"63b7b3a8a522691abe9f63e9\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/faculty/delete_faculty",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"faculty",
+						"delete_faculty"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/student/create_student",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2I3MjkxYTBjNmNmODVkMjJmZjQzMzgiLCJlbWFpbCI6ImRpcGFrbWFoYWphbjI4MDhAZ21haWwuY29tIiwiaWF0IjoxNjcyOTg2NjA0LCJleHAiOjE2NzI5OTc0MDR9.EuDmFgzm6xkZQyBjTeaqEmExc15vxdeGypK7eMZdz3k",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"name\":\"raju\",\r\n \"email\":\"raju05@gmail.com\",\r\n \"school\":\"63b7bffaa0214dab5e19c94b\",\r\n \"faculty\":\"63b7bbfc53f54b21bd0c4ee5\"\r\n \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/student/create_student",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"student",
+						"create_student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/student/get_student",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2I3MjkxYTBjNmNmODVkMjJmZjQzMzgiLCJlbWFpbCI6ImRpcGFrbWFoYWphbjI4MDhAZ21haWwuY29tIiwiaWF0IjoxNjcyOTg2NjA0LCJleHAiOjE2NzI5OTc0MDR9.EuDmFgzm6xkZQyBjTeaqEmExc15vxdeGypK7eMZdz3k",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/student/get_student",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"student",
+						"get_student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/student/update_student",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2I3MjkxYTBjNmNmODVkMjJmZjQzMzgiLCJlbWFpbCI6ImRpcGFrbWFoYWphbjI4MDhAZ21haWwuY29tIiwiaWF0IjoxNjcyOTg2NjA0LCJleHAiOjE2NzI5OTc0MDR9.EuDmFgzm6xkZQyBjTeaqEmExc15vxdeGypK7eMZdz3k",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"_id\":\"63b7c0ef70db244b203031e9\",\r\n    \"name\":\"dipak\",\r\n    \"email\":\"dipakmahajan2808gmail.com\",\r\n    \"school\":\"63b7bffaa0214dab5e19c94b\",\r\n    \"faculty\":\"63b7bbfc53f54b21bd0c4ee5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/student/update_student",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"student",
+						"update_student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/student/delete_student",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2I3MjkxYTBjNmNmODVkMjJmZjQzMzgiLCJlbWFpbCI6ImRpcGFrbWFoYWphbjI4MDhAZ21haWwuY29tIiwiaWF0IjoxNjcyOTg2NjA0LCJleHAiOjE2NzI5OTc0MDR9.EuDmFgzm6xkZQyBjTeaqEmExc15vxdeGypK7eMZdz3k",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"_id\":\"63b7c0ef70db244b203031e9\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/student/delete_student",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"student",
+						"delete_student"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

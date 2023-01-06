@@ -26,7 +26,7 @@ exports.createStudent = async (req, res) => {
 }
 exports.getStudent = async (req, res) => {
     try {
-        const student = await StudentModel.find().populate("school")
+        const student = await StudentModel.find().populate("school").populate("faculty")
         if (!student) {
             return res.status(404).json({ error: 'Student not found' })
         }

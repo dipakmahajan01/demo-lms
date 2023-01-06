@@ -12,6 +12,7 @@ const facultyModel = new mongoose.Schema({
     },
     school: {
         type: mongoose.Schema.Types.ObjectId,
+        ref: 'School'
     }
 })
 module.exports = mongoose.model('Faculty', facultyModel)

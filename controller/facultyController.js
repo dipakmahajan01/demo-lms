@@ -51,11 +51,11 @@ exports.updateFaculty = async (req, res) => {
 exports.deleteFaculty = async (req, res) => {
     try {
         const { _id } = req.body
-        const faculty = await facultyModel.findByIdAndDelete({ _id: _id })
+        const faculty = await facultyModel.findOneAndDelete({ _id: _id })
         if (!faculty) {
             return res.status(200).json({ error: ' faculty not found' })
         }
-        const student = await StudentModel.findByIdAndDelete({ faculty: _id })
+        const student = await StudentModel.findOneAndDelete({ faculty: _id })
         console.log(student)
         if (!student) {
             return res.status(404).json({ error: ' student not found' })
@@ -63,7 +63,7 @@ exports.deleteFaculty = async (req, res) => {
         return res.status(200).json({ message: 'successfully delete', data: faculty, data2: student })
 
     } catch (error) {
-        return res.status(500).json({ error: error })
+        return res.status(500).json({ error: error.message })
     }
 
 }

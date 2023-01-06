@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const schoolModel = mongoose.Schema({
+const schoolModel = new mongoose.Schema({
     name: {
         type: String,
         required: true
@@ -8,14 +8,6 @@ const schoolModel = mongoose.Schema({
         type: String,
         required: true,
         unique: true
-    },
-    faculty_id: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Faculty",
-    },
-    student_id: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Student',
     },
 
 }, { timestamp: true })
